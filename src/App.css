@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.carusal {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.progress {
+  height: 140px;
+  width: 140px;
+  margin: 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ffff 100%, #ffff 100%), linear-gradient(to bottom, #ffff 100%, #ffff 100%), linear-gradient(to right, #ffff 100%, #ffff 100%), linear-gradient(to bottom, #ffff 100%, #ffff 100%);
+  background-size: 100% 10px, 10px 100%, 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+  animation: progress 5s linear forwards;
+  background-position: -140px 0px, 130px -140px, 140px 130px, 0px 140px;
+  
+}
+.progress:active{
+  -webkit-animation-name:none!important;
+}
+
+@keyframes progress {
+  0% {
+    background-position: -140px 0px, 130px -140px, 140px 130px, 0px 140px;
+  }
+
+  35% {
+    background-position: 0px 0px, 130px -140px, 140px 130px, 0px 140px;
+  }
+
+  50% {
+    background-position: 0px 0px, 130px 0px, 140px 130px, 0px 140px;
+  }
+
+  85% {
+    background-position: 0px 0px, 130px 0px, -0px 130px, 0px 140px;
+  }
+
+  100% {
+    background-position: 0px 0px, 130px 0px, -0px 130px, 0px 0px;
+  }
+}
+
+.subbox {
+  display: flex;
+  width: 129px;
+  height: 129px;
+  border: 1px solid #ffff;
+  margin-left: 4px;
+  margin-top: 4px;
+  position: absolute;
+  z-index: -1;
+}
+
+.thumbnail {
+  display: flex;
+}
+
+.count {
+  display: flex;
+  height: 100px;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.count span {
+  font-size: 1em;
+  color: #ffff;
+}
+
+.line {
+  width: 100px;
+  padding: 0;
+  margin: auto;
+  height: 1px;
+  border: none;
+  color: #ffff;
+  background-color: #ffff;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-carusal {
+  position: absolute;
+  z-index: -2;
+}
+
+.preview {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-button {
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.progress:hover .overlay {
+  opacity: 0.5;
+}
+.carusal-controlls{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 7em;
+  margin-bottom: 4em;
+}
+.nav-bar{
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.nav-body{
+  width: 100%;
+  background-color: white;
+  padding: 35px;
+  box-sizing: border-box;
+}
